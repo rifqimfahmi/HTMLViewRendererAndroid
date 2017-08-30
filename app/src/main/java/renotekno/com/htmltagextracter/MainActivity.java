@@ -1,42 +1,25 @@
 package renotekno.com.htmltagextracter;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutCompat;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import org.jsoup.Jsoup;
-import org.jsoup.safety.Whitelist;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<View>>{
 
-    public static String HTMLDummy = "<div class=\"separator\" style=\"clear: both; text-align: center;\"> <a href=\"https://2.bp.blogspot.com/--TX3QH_tmFU/V7FGnP_teXI/AAAAAAAADe4/vbPzICw_-xcS2lmF2jjdfx2Bg5bhKp5UQCLcB/s1600/Renotekno_Hadir_di_Google_Play.jpg\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img alt=\"download aplikasi renotekno di google play\" border=\"0\" height=\"286\" src=\"https://2.bp.blogspot.com/--TX3QH_tmFU/V7FGnP_teXI/AAAAAAAADe4/vbPzICw_-xcS2lmF2jjdfx2Bg5bhKp5UQCLcB/s640/Renotekno_Hadir_di_Google_Play.jpg\" title=\"Renotekno Hadir di Google Play\" width=\"640\" /></a></div> Hi sobat renotekno setelah mempelajari pemrograman android selama 7 bulan dari berbagai macam sumber, mimin ingin membuat sebuah aplikasi android yang dapat diintegrasikan dengan blogger dan hal itu tercapai, kini kalian dapat mengakses konten renotekno melalui aplikasi android yang aplikasinya dapat kalian download melalui playstore secara gratis. Kalian juga dapat menemukan beberapa fitur tambahan yang tidak dapat kalian temukan di website langsung.<br /> <div style=\"text-align: center;\"> <a href=\"https://play.google.com/store/apps/details?id=net.renotekno.rifqi.renoteknobuild&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1\"><img alt=\"Get it on Google Play\" class=\"playstore-banner\" height=\"123\" src=\"https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png\" style=\"margin: 0px auto;\" width=\"320\" /></a></div> <h2> Mengenai Aplikasi Renotekno</h2> <div> Umumnya para blogger membuat aplikasi android untuk blog nya menggunakan WebView. Menggunakan WebView untuk pembuatan aplikasi android untuk blog sama saja seperti memuat sebuah website melalui mobile smartphone menggunakan browser. Kalian juga bisa lihat biasanya aplikasi yang seluruhnya menggunakan WebView tampilanya sama persis dengan tampilan versi mobile website tersebut. Metode ini tentunya menurut mimin kurang efektif karena user tetap menload semua javascript dan css yang ada sehingga meningkatkan waktu tunggu atau <i>load time </i>dari halaman tersebut<br /> <!-- Adsense --> Pada aplikasi android renotekno ini, mimin menggunakan Blogger API untuk mendapatkan data konten melalui server Blogger Google. Dengan menggunakan Blogger API maka para pengguna hanya memuat informasi - informasi penting saja seperti:<br /> <br /> <ul> <li>Judul pos</li> <li>Gambar pos</li> <li>Label pos</li> <li>Konten pos</li> <li>DLL</li> </ul> <div> Dengan begitu para user tidak perlu memuat file - file javascript ataupun CSS yang sangat banyak sehingga waktu tunggu bisa lebih cepat dibanding mengakses blog renotekno melalui website dan juga tidak terlalu memakan banyak bandwidth. Data yang diterima dari Blogger API berupa JSON dan kemudian mimin mengolah data tersebut agar dapat ditampilkan pada aplikasi. Bagi kalian yang belum mengenal JSON, JSON adalah (<i>javascript Object Notation</i>) yang biasanya merupakan sarana umum untuk mengirimkan informasi ke berbagai macam platform.<br /> <h2> Apa Saja Fiturnya ?</h2> </div> <div class=\"separator\" style=\"clear: both; text-align: center;\"> <a href=\"https://2.bp.blogspot.com/-rlJ0wvXGEy4/V7FZnjnGq-I/AAAAAAAADfI/TYqXLf_CqfsxjrnjDMzpP7hUogewp215QCLcB/s1600/Renotekno_Hadir_di_Google_Play_1.jpg\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img alt=\"download aplikasi renotekno di google play\" border=\"0\" height=\"368\" src=\"https://2.bp.blogspot.com/-rlJ0wvXGEy4/V7FZnjnGq-I/AAAAAAAADfI/TYqXLf_CqfsxjrnjDMzpP7hUogewp215QCLcB/s640/Renotekno_Hadir_di_Google_Play_1.jpg\" title=\"Renotekno Hadir di Google Play\" width=\"640\" /></a></div> <div> <br /></div> Untuk mengakses aplikasi ini tentunya pengguna membutuhkan koneksi internet untuk mendapatkan data dari server Blogger Google. Di halaman utama aplikasi renotekno terdapat 3 bagian yaitu <b>Artikel Pilihan</b>&nbsp;yang terdiri dari 5 artikel populer di blog renotekno ini.&nbsp;<b>Artikel Terbaru</b>&nbsp;yang terdiri dari 10 artikel terbaru sama seperti <i>recent posts</i>, dan <b>Kategori</b>&nbsp;untuk menampilkan daftar pos berdasarkan kategori atau label. Pada halaman utama juga terdapat fitur search pada bagian atas untuk melakukan pencarian pos.<br /> <br /> <div class=\"separator\" style=\"clear: both; text-align: center;\"> <a href=\"https://4.bp.blogspot.com/-YkiW_47Vzw4/V7FaaU8UI_I/AAAAAAAADfM/Sve_eo16Zyssv30eaBYUkX09Ev87VQZwACLcB/s1600/Renotekno_Hadir_di_Google_Play_2.jpg\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img alt=\"download aplikasi renotekno di google play\" border=\"0\" height=\"400\" src=\"https://4.bp.blogspot.com/-YkiW_47Vzw4/V7FaaU8UI_I/AAAAAAAADfM/Sve_eo16Zyssv30eaBYUkX09Ev87VQZwACLcB/s400/Renotekno_Hadir_di_Google_Play_2.jpg\" title=\"Renotekno Hadir di Google Play\" width=\"225\" /></a></div> Terdapat juga navigasi drawer yang dapat memudahkan pengguna menavigasi pada halaman yang ada. Adapun menu pada navigasi drawer diantaranya:<br /> <br /> <ul> <li><b>My Favorite</b>&nbsp;: Menampilkan pos favorite yang telah kalian tandai</li> <li><b>Semua Artikel</b>&nbsp;: Menampilkan semua daftar pos yang ada pada blog renotekno</li> <li><b>Visit Website</b>&nbsp;: Membuka website melalui browser</li> </ul> <div class=\"separator\" style=\"clear: both; text-align: center;\"> <a href=\"https://4.bp.blogspot.com/-nLETi0dXcSk/V7Fbo28u_EI/AAAAAAAADfg/Xg_Myc2KGTIrJje3BRS8m3ADffgURTJkgCLcB/s1600/Renotekno_Hadir_di_Google_Play_3.jpg\" imageanchor=\"1\" style=\"margin-left: 1em; margin-right: 1em;\"><img alt=\"download aplikasi renotekno di google play\" border=\"0\" height=\"400\" src=\"https://4.bp.blogspot.com/-nLETi0dXcSk/V7Fbo28u_EI/AAAAAAAADfg/Xg_Myc2KGTIrJje3BRS8m3ADffgURTJkgCLcB/s400/Renotekno_Hadir_di_Google_Play_3.jpg\" title=\"Renotekno Hadir di Google Play\" width=\"223\" /></a></div> <div> Gambar diatas merupakan tampilan ketika kalian membuka sebuah postingan. Terdapat tombol <b>share</b>, <b>refresh</b> dan tombol <b>back</b> pada bagian menu diatas. Ada juga tombol untuk memasukkan pos ini pada bagian favorite yang terdapat di pojok kanan bawah, tombol ini juga biasa disebut sebagai FAB ( <i>Floating Action Button</i> ). Pada bagian konten pos ini mimin menggunakan WebView untuk menampilkan nya. Kenapa mimin menggunakan WebView ? karena data konten pos terdapat tag HTML dan salah satu cara untuk menampilkanya itu menggunakan WebView.&nbsp;</div> <div> <br /></div> <div> Bisa saja dengan tidak menggunakan WebView tetapi caranya lumayan rumit, yaitu menggunakan RegEx atau bisa disebut (<i>&nbsp;Regular Exspression</i>&nbsp;) untuk memotong tag HTML dan mendapatkan teks nya saja dari konten tersebut. I am working on it !! :D</div> <div> <br /></div> <br /> Aplikasi renotekno juga masih belum begitu sempurna dan mimin berusaha untuk meningkatkanya agar lebih menarik dan memiliki fitur yang bermanfaat untuk para pembaca. Dimohon untuk memberikan kritik dan saranya pada aplikasi renotekno ini agar mimin mengetahui kekurangan dan kelebihanya. Terimakasih :D.</div> ";
-    private List<String> splittedPostComponent = null;
-    private static List<String> imageLink = new ArrayList<>();
-
+    private String html = "<div style=\"text-align: center;\"> <b><span style=\"font-family: &quot;trebuchet ms&quot; , sans-serif; font-size: x-large;\">Penalty Algoritma Panda</span></b></div> <div class=\"separator\" style=\"clear: both; text-align: center;\"> <img border=\"0\" height=\"287\" src=\"https://3.bp.blogspot.com/-TNUC9R7KD_Y/V_4Kl4k5TxI/AAAAAAAAAHA/BqpajYpXqmElnB8jECMRzC3hILv-OaHogCEw/s400/google%2Bpanda.jpg\" width=\"400\" /></div> <div style=\"text-align: left;\"> Salam ind45-Ya setelah saya membahas tentang <a href=\"http://ind45.blogspot.co.id/2016/10/algoritma-google.html\" rel=\"nofollow\" target=\"_blank\">Algoritma Google</a>. Ternyata dari salah satu Algoritma ini mempunyai Hukuman, yaitu hukuman Algoritma Panda. Ok sebelum kita membahas tentang bagaimana <a href=\"http://ind45.blogspot.co.id/2016/10/cara-mengatasi-hukuman-algoritma-google.html\" rel=\"nofollow\" target=\"_blank\">cara keluar dari hukuman Google Panda.</a><br /> <br /> Ok guys bagi anda yang sudah lama bermain di sunia SEO pasti anda akan bisa melihat pada akhir bulan mei yang lalu ada banyak sekali website yang jatuh peringkatnya, tapi tidak kalah dengan peringkat yang naik. Jadi inilah gambaran dasar bahwa era SEO saat ini kita tidak bisa mengabaikan onpage, karna onpage bisa membuat ranking website anda meroket bahkan terjungkal begitu saja<br /> <br /> Jadi bagi yang ingin melakukan <a href=\"http://ind45.blogspot.co.id/2016/10/apa-itu-seo.html\" rel=\"nofollow\" target=\"_blank\">SEO </a>anda 100% wajib memperbaiki onpage dan offpage.<br /> Saya tidak akan membahas secara detail masalah onpage dan offpage disini, karna sangat panjang dan membutuhkan waktu yang sangat lama. Tidak perlu khawatir karna panda tidak menyerang atau membanting halaman -halaman hanya karna struktur yang tidak maksimal. Panda hanya membanting<br /> halaman-halaman yang strukturnya jelas tidak sesuai dengan standar teknis Google dan positif melakukan spam pada onpagenya.<br /> <b><span style=\"font-size: x-large;\"><br /></span></b> <br /> <h4> <b><span style=\"font-family: &quot;georgia&quot; , &quot;times new roman&quot; , serif; font-size: large;\">Hal Apa Yang Harus Diperbaiki Untuk Keluar Sanksi Google Panda</span></b></h4> <div> Ya tentunya jika anda merasa terkena pukulan dari panda, anda sudah bosan dari hukuman tersebut dan ingin keluar dari hukuman panda? Tapi satu hal yang harus anda ketahui diantaranya:memperbaiki onpage itu relatif lebih mudah dari pada offpage. Hanya saja anda harus paham teknik pelaksanaanya seperti apa. Ok langsung aja ya guys, di bwah adalah hal hal yang harus anda perhatikan dari halaman web yang anda miliki</div> <div> <br /></div> <div> <ul> <li>Apakah konten anda berkualitas dan memang bisa menolong orang lain atau hanya sekedar hobi dan basa-basi untuk meroketkan jumlah halaman? Kalau anda bisa menilai dengan jujur. Maka itu akan menolong anda pada saat ini</li> <li>Apakah anda melakukan over optimization(optimasi yang berlebihan). Ya barangkali dengan begitu banyaknya kata kunci di halaman anda? Atau terlalu banyak konten yang membahas hal-hal itu saja atau konten yang anda buat tidak unik atau tidak berkualitas</li> <li>Periksa juga apakah anda sudah melakukan teknik webspam yang disebut Doorway Pages?&nbsp;</li> <li>Cek juga apakah konten anda mempunyai masalah duplikat? Ya sebagai contohnya duplikat ialah 2 halaman atau lebih di halaman web anda yang sangat percis</li> <li>Susunlah sistem kategori anda yang rapih, jangan anda menjadikan kategore atau tegging sebagai alat menumpuk pada kata kunci</li> <li>Pertimbangkan untuk menjadi mobile friendly dengam memakai template yang responsif, karna dengan template yang bagus serta unik para pengunjung atau para pembaca juga senang akan keiindahan blog yang anda miliki. Ini juga masih menjadi PR bagi saya untuk mengedit template blog ini agar lebih unik dan menarik</li> <li>Berhenti mencuri konten orang lain dan jika ada konten curian segera dihapus. Konten yang diminta baik-baik untuk &nbsp;dihapus karena intinya itu sangat merugikan anda karna membuat website anda terlihat low quality content.</li> <li>Ok guys dari sekian pembahasan kita diatas apa ada hal yang harus kalian perbaiki? kalau terlalu banyak masalah yang harus anda perbaiki, menurut saran saya sebaiknya desain ulang website anda.</li> </ul> Ya jadi itulah hal yang harus anda perhatikan dalam era Panda terbaru saat ini. Setidaknga setelah membandingkan beberapa halaman yang terkena kenaikan ataupun penurunan grafik. Mudah mudahan saya disini memberikan manfaat bagi yang sudah membaca dan blog anda segera pulih setelah kunjungan Googlebot.&nbsp;</div> </div> ";
     // a viewGroup of the layout
     private LinearLayout linearLayoutViewGroup;
-
-    private static List<View> viewToBeInflated = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,21 +27,34 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setContentView(R.layout.activity_main);
         initView();
 
-        getSupportLoaderManager().initLoader(0, null, this);
+        // start loader to load post
+        Bundle bundle = new Bundle();
+        bundle.putString(Data.POST_CONTENT_TAG_BUNDLE, html);
+        getSupportLoaderManager().initLoader(Data.LOADER_CREATE_VIEWS, bundle, this);
     }
 
-    private void inflateView() {
+    private void inflateView(List<View> viewsComponents) {
+        Log.d("VIEWS_SIZE", viewsComponents.size() + "");
+        // keep track of the image URL arrays index if exist start with 0
         int imageIndex = 0;
-        if (viewToBeInflated.size() > 0){
-            for (int i = 0; i < viewToBeInflated.size(); i++) {
-                View view = viewToBeInflated.get(i);
+        // check if the views arrays is not null
+        if (viewsComponents.size() > 0){
+            // loop through each view to inflate it to the viewgroup
+            for (int i = 0; i < viewsComponents.size(); i++) {
+                View view = viewsComponents.get(i);
 
+                // if the view is instance of ImageView start loading image from the URL with glide
                 if (view instanceof ImageView) {
-                    Log.d("IMAGE_SIZE", ContentLoader.imagesSrc.size() + "");
-                    Glide.with(MainActivity.this).load(ContentLoader.imagesSrc.get(imageIndex)).into((ImageView) view);
+                    Glide.with(MainActivity.this).load(Data.imagesSrc.get(imageIndex)).into((ImageView) view);
+
+                    // Increase image index position to be corresponded with the images URL array index
                     imageIndex++;
                 }
 
+                // inflate the view to the viewgroup
+                if (view.getParent() != null) {
+                    ((ViewGroup) view.getParent()).removeView(view);
+                }
                 linearLayoutViewGroup.addView(view);
             }
         }
@@ -68,20 +64,21 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         linearLayoutViewGroup = (LinearLayout) findViewById(R.id.linearLayoutViewGroup);
     }
 
+    /***
+     * Loader interface callbacks start
+     */
     @Override
     public Loader<List<View>> onCreateLoader(int id, Bundle args) {
-        return new ContentLoader(this);
+        // create new loader instance @ContentLoader class
+        return new ContentLoader(MainActivity.this, args.getString(Data.POST_CONTENT_TAG_BUNDLE));
     }
 
     @Override
-    public void onLoadFinished(Loader<List<View>> loader, List<View> data) {
-
-        if (data != null && data.size() > 0) {
-            // Instead of using earthQuakes.addAll(data) and earthQuakeAdapter.notifyDataSetChanged()
-            // we can use the adapter instead to add all data and
-            // it will be automatically notified without specifying notifyDataSetChanged()
-            viewToBeInflated = data;
-            inflateView();
+    public void onLoadFinished(Loader<List<View>> loader, List<View> viewsComponents) {
+        // Loader has finish creating array of views
+        // If the view array is not null and the size > 0 inflate the view
+        if (viewsComponents != null && viewsComponents.size() > 0) {
+            inflateView(viewsComponents);
         }
     }
 
@@ -89,4 +86,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoaderReset(Loader<List<View>> loader) {
 
     }
+    /***
+     * Loader interface callbacks End
+     */
+
 }
